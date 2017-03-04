@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Whitestone Contest - Mike Gao - Animation by Patrik Huebner</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			html {overflow-x: hidden;}
+			body {
+				background-color: #000;
+				color: #fff;
+				margin: 0px;
+				overflow-x: hidden;
+				font-family: Arial;
+			}
+			#statsDIV div {
+				position: absolute !important;
+				top: 0 !important;
+				left: 0px !important;
+				opacity: 1 !important;
+				z-index:9 !important;
+				display: none;
+			}
+			#mobileInfo {background: #000; position:absolute;width:100%;height:100%; text-align:center; top:30%; z-index:200; display:none; color:#fff;}
+			#preloader {background: #000; position:fixed;width:100%;height:100%; text-align:center; z-index:400; display:block; color:#fff;}
+			a, a:hover, a:visited {color:#fff;}
+			a {text-decoration: none;}
+			a:hover{text-decoration: underline;}
+
+			#musicPlayer {
+				position: absolute;
+				bottom: 20px;
+				left: 20px;
+				font-size: 12px;
+			}
+			#musicPlayerCover img {
+				width: 100px; height: 100px;
+				-webkit-box-shadow: 0px 0px 34px -10px rgba(0,0,0,0.75);
+				-moz-box-shadow: 0px 0px 34px -10px rgba(0,0,0,0.75);
+				box-shadow: 0px 0px 34px -10px rgba(0,0,0,0.75);
+			}
+			#controls span:hover {
+				text-decoration: underline;
+				cursor:pointer;
+			}
+			#canvasOverlay {
+				position: absolute;
+				width: 100%; height: 100%;
+				top: 0;
+				z-index: 100;
+				pointer-events: none;
+				text-align:center;
+				top: 50%;
+			}
+			#canvasOverlay span {
+				line-height:0;
+				font-size: 80vw;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id="statsDIV"></div>
+
+		<script src="js/jquery-3.1.1.slim.min.js"></script>
+		<script src="js/stats.min.js"></script>
+
+		<script src="js/three.min.js"></script>
+		<script src="js/OBJLoader.js"></script>
+
+		<script src="js/p5/p5.min.js"></script>
+		<script src="js/p5/p5.sound.min.js"></script>
+
+		<script src="js/TweenLite.min.js"></script>
+
+		<script src="audio.js"></script>
+		<script src="lightsCamera.js"></script>
+		<script src="timing.js"></script>
+		<script src="canvasAnimation.js"></script>
+		<script src="sketch.js"></script>
+
+		<div id="mobileInfo">
+			<p><img src="img/loading.gif" alt="Loading..."/></p>
+			<p style="font-size:40px;">Touch to start the animation</p>
+		</div>
+
+		<div id="preloader">
+			<div style="display:block; width:100%; top: 30%; position:fixed; text-align:center;">
+				<p><img src="img/loading.gif" alt="Loading..."/></p>
+				<p style="font-size:25px;">Loading - stand by...</p>
+				<p style="font-size:11px;">Whitestone Three.js contest. Music by Mike Gao. Animation and design by <a href="https://www.patrik-huebner.com" target="_blank">Patrik H&uuml;bner</a></p>
+			</div>
+		</div>
+
+		<div id="canvasID" style="width:100%; height:100%; display:block;"></div>
+		<div id="canvasOverlay"><span id="canvasOverlaySpan"></span></div>
+		<div id="musicPlayer">
+			<div id="musicPlayerCover">
+				<a href="https://soundcloud.com/mikegao"><img src="img/cover.jpg" alt="Mike Gao Cover"/></a>
+			</div>
+			<div id="musicPlayerTitle">Mike Gao - Adventura</div>
+			<div id="controls">
+				<span id="pauseSpan" onclick="playPause()">Pause</span> | <span id="muteSpan" onclick="muteMe()">Mute</span>
+			</div>
+		</div>
+		<a href="https://www.patrik-huebner.com" style="position: absolute; bottom: 20px; right: 20px; font-size: 10px;">Animation by Patrik Huebner</a>
+
+	</body>
+</html>

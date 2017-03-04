@@ -28,7 +28,7 @@
 				display: block;
 				background: #ff0000 url("img/clickPromo.jpg") no-repeat center;
 				background-size: cover;
-				z-index: 1300;
+				z-index: 300;
 			}
 			#mobileInfo {
 			}
@@ -87,50 +87,11 @@
 
 	<body>
 
-		<div id="statsDIV"></div>
-
-		<script src="js/jquery-3.1.1.slim.min.js"></script>
-		<script src="js/stats.min.js"></script>
-
-		<script src="js/three.min.js"></script>
-		<script src="js/OBJLoader.js"></script>
-
-		<script src="js/p5/p5.min.js"></script>
-		<script src="js/p5/p5.sound.min.js"></script>
-
-		<script src="js/TweenLite.min.js"></script>
-
-		<script src="audio.js"></script>
-		<script src="lightsCamera.js"></script>
-		<script src="timing.js"></script>
-		<script src="canvasAnimation.js"></script>
-		<script src="sketch.js"></script>
-
 		<div id="playWrapper">
 			<div id="mobileInfo">
 				<div id="mobileInfoContent" onclick="startSketch()">
-					<p><img src="img/Play@2x.png" alt="Loading..."/></p>
+					<p><a href="index2.html"><img src="img/Play@2x.png" alt="Loading..."/></a></p>
 				</div>
-			</div>
-		</div>
-
-		<div id="preloader">
-			<div style="display:block; width:100%; top: 30%; position:fixed; text-align:center;">
-				<p><img src="img/loading.gif" alt="Loading..."/></p>
-				<p style="font-size:25px;">Loading - stand by...</p>
-				<p style="font-size:11px;">Whitestone Three.js contest. Music by Mike Gao. Animation and design by <a href="https://www.patrik-huebner.com" target="_blank">Patrik H&uuml;bner</a></p>
-			</div>
-		</div>
-
-		<div id="canvasID" style="width:100%; height:100%; display:block;"></div>
-		<div id="canvasOverlay"><span id="canvasOverlaySpan"></span></div>
-		<div id="musicPlayer">
-			<div id="musicPlayerCover">
-				<a href="https://soundcloud.com/mikegao"><img src="img/cover.jpg" alt="Mike Gao Cover"/></a>
-			</div>
-			<div id="musicPlayerTitle">Mike Gao - Adventura</div>
-			<div id="controls">
-				<span id="pauseSpan" onclick="playPause()">Pause</span> | <span id="muteSpan" onclick="muteMe()">Mute</span>
 			</div>
 		</div>
 
