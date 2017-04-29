@@ -1,0 +1,75 @@
+body {
+  margin: 0px;
+  background: #000;
+}
+
+@font-face {
+  font-family: 'Perfect-DOS-VGA-437';
+    src:  url('font/perfectDOS/Perfect-DOS-VGA-437.ttf.woff') format('woff'),
+    url('font/perfectDOS/Perfect-DOS-VGA-437.ttf.svg#Perfect-DOS-VGA-437') format('svg'),
+    url('font/perfectDOS/Perfect-DOS-VGA-437.ttf.eot'),
+    url('font/perfectDOS/Perfect-DOS-VGA-437.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.dg {
+  font-family: "terminal_grotesque" !important;
+}
+#gui_container {
+  display:none;
+  position: absolute;
+  z-index: 1000;
+}
+
+#textContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+#textPosition {
+  position: absolute;
+  left: 20%;
+  top: 38%;
+  pointer-events: none;
+}
+
+.mainHeading {
+  pointer-events: none;
+  font-family: "Perfect-DOS-VGA-437";
+  color: #fff;
+  font-size: 10vw;
+  line-height: 1;
+  margin: 0;
+  letter-spacing: -10px;
+}
+
+.subHeading {
+  pointer-events: none;
+  font-family: "Perfect-DOS-VGA-437";
+  color: #fff;
+  font-size: 1vw;
+  line-height: 1;
+  margin: 0;
+}
+
+#addCanvas {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  display: block;
+}
+#iCanvas {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  display: block;
+}
+
+#Stats-output {
+  display: none;
+}

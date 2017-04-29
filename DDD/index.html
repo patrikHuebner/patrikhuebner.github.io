@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>DDD Milano, "Pixel" - Patrik H&uuml;bner</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			#preloader {
+			  position: absolute;
+				width: 100%;
+			  z-index: -1;
+			  text-align:center;
+			  font-size: 24px;
+			  font-family: Monospace;
+				margin-top: 60px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="preloader">
+			<img src="data/loading.gif" alt="loading DDD-experiment" />
+			<p/>
+			Loading DDD-experiment...
+		</div>
+
+		<div id="WebGL-output"></div>
+		<div id="Stats-output"></div>
+
+		<div id="textContainer">
+			<div id="textPosition">
+				<div class="mainHeading"></div>
+				<div class="subHeading"></div>
+				<div id="gui_container"></div>
+			</div>
+		</div>
+
+		<div id="addCanvas">
+			<canvas id="iCanvas"></canvas>
+		</div>
+
+		<script type="text/javascript" src="js/jquery-3.2.1.slim.min.js"></script>
+		<script type="text/javascript" src="js/three.min.js"></script>
+		<script type="text/javascript" src="js/TweenLite.min.js"></script>
+		<script type="text/javascript" src="js/mainData.min.js"></script>
+
+		<script type="text/javascript" src="js/sketch.min.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</body>
+</html>
