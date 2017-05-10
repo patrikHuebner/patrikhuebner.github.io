@@ -14,6 +14,25 @@
 			  font-family: Monospace;
 				margin-top: 60px;
 			}
+			#infoBlock {
+				position: absolute; top: 200px; font-size: 9px;
+				color: #575757;
+				-webkit-transform: rotate(-90deg);
+		    -moz-transform: rotate(-90deg);
+		    -o-transform: rotate(-90deg);
+		    -ms-transform: rotate(-90deg);
+		    transform: rotate(-90deg);
+				right: 0px;
+				margin-left: 0;
+				font-family: "Perfect-DOS-VGA-437";
+			}
+			#infoBlock a, #infoBlock a:visited {
+				color: #575757;
+				text-decoration: none;
+			}
+			#infoBlock span {
+				font-size: 28px;
+			}
 		</style>
 	</head>
 	<body>
@@ -38,6 +57,19 @@
 			<canvas id="iCanvas"></canvas>
 		</div>
 
+		<audio id="myAudio" loop>
+			<source src="data/337693.mp3" type="audio/mpeg">
+		  Your browser does not support the audio element.
+		</audio>
+
+		<div id="infoBlock">
+			<span>+</span>
+			<br/>
+			Design and code by <a href="https://www.patrik-huebner.com" target="_blank">Patrik Huebner</a>
+			<br/>
+			Audio by <a href="http://www.freesound.org/people/cabled_mess/" target="_blank">Cabled Mess</a>
+		</div>
+
 		<script type="text/javascript" src="js/jquery-3.2.1.slim.min.js"></script>
 		<script type="text/javascript" src="js/three.min.js"></script>
 		<script type="text/javascript" src="js/TweenLite.min.js"></script>
@@ -46,5 +78,13 @@
 		<script type="text/javascript" src="js/sketch.min.js"></script>
 
 		<link rel="stylesheet" type="text/css" href="style.css" />
+
+		<script type="text/javascript">
+			$( document ).ready(function() {
+				var audioTrack = document.getElementById("myAudio");
+			  audioTrack.play();
+			});
+		</script>
+
 	</body>
 </html>
