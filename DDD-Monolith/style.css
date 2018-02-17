@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100");
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  overflow: hidden;
+
+  /* PREVENT TEXT SELECTION */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer */
+  -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+  -webkit-user-select: none; /* Chrome, Safari, and Opera */
+  -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+
+  -webkit-touch-callout:none;                /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust:none;             /* prevent webkit from resizing text to fit */
+  -webkit-tap-highlight-color:rgba(0,0,0,0); /* prevent tap highlight color / shadow */
+  -webkit-user-select:none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+}
+
+#animationCanvas {
+  position: fixed;
+  pointer-events: none;
+}
+
+#interactionInfo {
+  position: fixed;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+}
+#infoContainer {
+  transition: 1s cubic-bezier(1,0,0,1);
+  opacity: 0;
+  position: absolute;
+}
+#infoContainer img {
+  width: 150px;
+}
+
+
+#interactiveBox {
+  transition: 1s cubic-bezier(1,0,0,1);
+  position: fixed;
+  top: 200px;
+  left: 300px;
+  opacity: 0;
+}
+#backgroundBox {
+  pointer-events: none;
+  background: url("images/overlay.png") no-repeat;
+  background-size: contain;
+  width: 400px;
+  height: 400px;
+}
+
+
+#interactiveDots {
+  position: fixed;
+}
+.interactiveDot {
+  transition: 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+}
+.interactiveDot:hover {
+  padding: 1vw;
+  margin: -0.5vw 0 0 -0.5vw;
+}

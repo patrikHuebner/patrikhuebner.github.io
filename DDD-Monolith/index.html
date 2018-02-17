@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>DDD 2018, DEVX Experiment - Monolith - by Patrik Huebner</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<meta property="og:image" content="images/ogTeaser.jpg" />
+		<link rel="apple-touch-icon" href="images/iOS_touchIcon.png">
+		<link rel="icon" type="image/png" sizes="256x256" href="images/favIcon.png">
+		<style>
+			body {
+				font-family: Monospace;
+				background-color: #e9eaec;
+				margin: 0px;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+
+		<div id="animationCanvas"></div>
+		<div id="interactionInfo">
+			<div id="infoContainer" style="opacity: 0">
+				<img src="images/dragToRotate_small.gif" alt="Info" />
+			</div>
+		</div>
+
+		<div id="interactiveBox" style="opacity: 0">
+			<div id="backgroundBox"></div>
+
+			<div id="interactiveDots">
+				<div class="interactiveDot"></div>
+				<div class="interactiveDot"></div>
+				<div class="interactiveDot"></div>
+				<div class="interactiveDot"></div>
+				<div class="interactiveDot"></div>
+				<div class="interactiveDot"></div>
+				<div class="interactiveDot"></div>
+			</div>
+
+		</div>
+
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/three.min.js"></script>
+		<script src="js/libraries.js"></script>
+		<script src="js/postprocessing.js"></script>
+		<script src='js/TweenLite.min.js'></script>
+		<script src='js/EasePack.min.js'></script>
+		<script src="devx.js"></script>
+
+		<div id="WebGL-output"></div>
+		<div id="Stats-output"></div>
+	</body>
+</html>
